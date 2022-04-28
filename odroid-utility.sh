@@ -76,7 +76,7 @@ update_internals() {
 	baseurl="https://raw.githubusercontent.com/mdrjr/odroid-utility/master"
 	
 	FILES=`curl -s $baseurl/files.txt`
-	APP_REV=`curl -s https://api.github.com/repos/mdrjr/odroid-utility/git/refs/heads/master | awk '{ if ($1 == "\"sha\":") { print substr($2, 2, 40) } }'`
+	APP_REV=`curl -s https://api.github.com/repos/odelrio/odroid-utility/git/refs/heads/master | awk '{ if ($1 == "\"sha\":") { print substr($2, 2, 40) } }'`
 	
 	for fu in $FILES; do
 		echo "Updating: $fu"
